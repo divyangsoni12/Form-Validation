@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="form-container">
+    <h1>Register Your Account</h1>
+    <form id="signupForm" novalidate>
+      <!-- Prefix -->
+      <div class="form-group">
+        <label for="prefix">Prefix</label>
+        <select id="prefix" name="prefix">
+          <option value="Mr">Mr.</option>
+          <option value="Ms">Ms.</option>
+          <option value="Mrs">Mrs.</option>
+          <option value="Dr">Dr.</option>
+        </select>
+      </div>
+
+      <!-- First Name -->
+      <div class="form-group">
+        <label for="firstName">First Name *</label>
+        <input type="text" id="firstName" name="firstName" required />
+        <span class="error-msg" id="firstNameError"></span>
+      </div>
+
+      <!-- Last Name -->
+      <div class="form-group">
+        <label for="lastName">Last Name *</label>
+        <input type="text" id="lastName" name="lastName" required />
+        <span class="error-msg" id="lastNameError"></span>
+      </div>
+
+      <!-- DOB -->
+      <div class="form-group">
+        <label for="dob">Date of Birth *</label>
+        <input type="date" id="dob" name="dob" required />
+        <span class="error-msg" id="dobError"></span>
+      </div>
+
+      <!-- Gender -->
+      <div class="form-group">
+        <label>Gender *</label>
+        <div class="radio-group">
+          <label><input type="radio" name="gender" value="male" required /> Male</label>
+          <label><input type="radio" name="gender" value="female" /> Female</label>
+          <label><input type="radio" name="gender" value="other" /> Other</label>
+        </div>
+        <span class="error-msg" id="genderError"></span>
+      </div>
+
+      <!-- Username -->
+      <div class="form-group">
+        <label for="username">Username *</label>
+        <input type="text" id="username" name="username" required />
+        <span class="error-msg" id="usernameError"></span>
+      </div>
+
+      <!-- Password -->
+      <div class="form-group">
+        <label for="password">Password *</label>
+        <input type="password" id="password" name="password" required />
+        <span class="error-msg" id="passwordError"></span>
+      </div>
+
+      <!-- Confirm Password -->
+      <div class="form-group">
+        <label for="confirmPassword">Confirm Password *</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required />
+        <span class="error-msg" id="confirmPasswordError"></span>
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label for="email">Email ID *</label>
+        <input type="email" id="email" name="email" required />
+        <span class="error-msg" id="emailError"></span>
+      </div>
+
+      <!-- Contact No -->
+      <div class="form-group">
+        <label for="contact">Contact No *</label>
+        <input type="tel" id="contact" name="contact" required />
+        <span class="error-msg" id="contactError"></span>
+      </div>
+
+      <!-- Age (auto‑calculated, readonly) -->
+      <div class="form-group">
+        <label for="age">Age</label>
+        <input type="number" id="age" name="age" readonly />
+      </div>
+
+      <!-- Submit Button -->
+      <div class="form-group">
+        <button type="submit">Submit</button>
+      </div>
+
+      <!-- Success Message -->
+      <div class="alert alert-success" id="successMsg" style="display: none;">
+        🎉 Registration successful! Backend can receive data now.
+      </div>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

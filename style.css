@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 1. Force everything to stay within the screen */
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* This removes the scrollbar entirely */
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-container {
+  width: 95%;
+  max-width: 400px;
+  max-height: 98vh; /* Use almost full height */
+  padding: 15px 20px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  
+  /* 2. Flex column to make items shrink and fit */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* No scroll inside either */
+}
+
+h1 {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+/* 3. Compact everything by reducing margins */
+.form-group {
+  margin-bottom: 8px; /* Reduced space */
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  margin-bottom: 2px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 6px 10px; /* Reduced padding */
+  font-size: 13px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.radio-group {
+  display: flex;
+  gap: 10px;
+  font-size: 0.9rem;
+}
+
+button {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  background-color: #6e8efb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.error-msg {
+  font-size: 10px;
+  color: #e74c3c;
+  display: block;
+  height: 12px; /* Fixed height to keep spacing consistent */
+}
